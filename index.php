@@ -1,31 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<?php 
+include_once "app/site/paginas/includes/header.php"
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="">
-
-    <!-- outros -->
-    <link rel="stylesheet" href="">
-
-    <!-- meu css -->
-    <link rel="stylesheet" href="">
-
-    <title>Projeto final</title>
-</head>
-
-<body>
-
-    <!-- Header -->
-    <!-- Fim Header -->
 
     <!-- Páginas do meu site -->
     <!-- Fim Páginas do meu site -->
 
     <!-- Footer  -->
+
+    <!-- Jquery -->
+<script src="app/assets/js/jquery-min.js"></script>
+
+<!-- js -->
+<script src="app/assets/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Funções Js -->
+<script src=""></script>
 
 </body>
 
