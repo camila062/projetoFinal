@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="app/assets/icons/icomoon.css">
 
     <!-- meu css -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="app/assets/css/meucss.css">
 
     <title>Projeto final</title>
 </head>
@@ -23,8 +23,7 @@
 <body>
 
     <!-- Header -->
-        <h1>
-            <span class="icon-angellist"></span>
-            icons
-        </h1>
+    <header class="container-fluid p-0">
+        <img src="app/assets/img/header2.jpg" class="img-fluid w-100 p-0"  alt="">
+    </header>
     <!-- Fim Header -->
