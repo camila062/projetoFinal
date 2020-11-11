@@ -5,7 +5,6 @@ include_once "app/site/paginas/includes/header.php";
 // Navegação 
 include_once "app/site/paginas/includes/navegacao.php";
 
-echo "<hr>";
 
 // Páginas do meu Site 
 // echo '<h1>Minhas Páginas</h1>';
@@ -27,6 +26,10 @@ if ($paginas) {
         case 'contato':
             include_once "app/site/paginas/contato.php";
             break;
+
+        case 'validaLogin':
+            include_once "app/site/paginas/validaLogin.php";
+            break;
         
         default:
         include_once "app/site/paginas/inicial.php";
@@ -37,7 +40,7 @@ if ($paginas) {
 }
 
 
-echo '<hr>';
+
 
 // Rodapé
 include_once "app/site/paginas/includes/footer.php";

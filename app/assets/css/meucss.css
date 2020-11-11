@@ -1,3 +1,21 @@
+@font-face {
+    font-family: "rain";
+    src: url(../fonts/Rainbow\ Universe.ttf);
+}
+
+@font-face {
+    font-family: "summer";
+    src: url(../fonts/Summer\ Flash.otf);
+}
+
 body {
-    background-image: url(../img/fundo1.jpg);
+    background-image: url(../img/fundo3.jpg);
+}
+
+label {
+    font-family: "summer";
+}
+
+h1 {
+    font-family: "rain";
 }

@@ -1,7 +1,7 @@
    
 <div class="container-fluid table-secondary pt-2">
     <footer class="container text-center ">
-        <img src="app/assets/img/footer2.png" alt="">
+        <img src="app/assets/img/icon2.png" alt="">
     </footer>
     <div class="container">
         <p class="text-center pt-3 ">
