@@ -17,14 +17,14 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="app/painelAdm/index2.html"><b>Admin</b>LTE</a>
+    <a href="#">Painel Adm</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Faça login para iniciar sua sessão</p>
 
-      <form action="app/painelAdm/index3.html" method="post">
+      <form action="#" method="post">
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Email">
           <div class="input-group-append">
@@ -50,11 +50,10 @@
               </label>
             </div>
           </div>
-          <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+            <button type="submit" class="btn btn-primary btn-block"> <strong>Entrar</strong> </button>
+
           </div>
-          <!-- /.col -->
         </div>
       </form>
 
@@ -70,10 +69,10 @@
       <!-- /.social-auth-links -->
 
       <p class="mb-1">
-        <a href="forgot-password.html">Esqueci minha senha</a>
+        <a href="#">Esqueci minha senha</a>
       </p>
       <p class="mb-0">
-        <a href="register.html" class="text-center">Cadastre-se</a>
+        <a href="#" class="text-center">Cadastre-se</a>
       </p>
     </div>
     <!-- /.login-card-body -->
