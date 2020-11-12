@@ -59,7 +59,7 @@
       </form>
 
       <div class="social-auth-links text-center mb-3">
-        <p>- OR -</p>
+        <p>- OU -</p>
         <a href="#" class="btn btn-block btn-primary">
           <i class="fab fa-facebook mr-2"></i> Entre com o Facebook
         </a>
