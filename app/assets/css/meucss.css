@@ -8,6 +8,11 @@
     src: url(../fonts/Summer\ Flash.otf);
 }
 
+@font-face {
+    font-family: "aut";
+    src: url(../fonts/Autumn\ Arbor.otf);
+}
+
 body {
     background-image: url(../img/fundo3.jpg);
 }
@@ -17,5 +22,5 @@ label {
 }
 
 h1 {
-    font-family: "rain";
+    font-family: "aut";
 }

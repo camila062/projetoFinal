@@ -1,7 +1,7 @@
 <div class="container-fluid table-info">
     <div class="container">
         <nav class="navbar  navbar-expand-lg navbar-info">
-            <a class="navbar-brand" href="?pg=inicial"><img src="app/assets/img/iconN.png" alt=""></a>
+            <a class="navbar-brand" href=""><img src="app/assets/img/iconN.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>

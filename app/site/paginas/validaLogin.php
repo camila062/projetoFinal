@@ -1,6 +1,6 @@
 <?php 
 
 echo 'Usuário: '. $_POST['nome']. '<br>';
-echo 'Usuário: '. $_POST['email']. '<br>';
+echo 'E-mail: '. $_POST['email']. '<br>';
 
 ?>
