@@ -9,8 +9,8 @@
 // Páginas do meu Site 
 // echo '<h1>Minhas Páginas</h1>';
 
-if (isset($_SESSION['usuario'])) {
-    $usuario = 'Camila';
+if (!isset($_SESSION['usuario'])) {
+    $usuario = 'camila2gmail.com';
     $senha = '123456';
 
     session_start();
