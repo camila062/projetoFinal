@@ -9,19 +9,47 @@
 // Páginas do meu Site 
 // echo '<h1>Minhas Páginas</h1>';
 
-$paginas= isset($_GET['pg']);
+if (isset($_SESSION['usuario'])) {
+    $usuario = 'Camila';
+    $senha = '123456';
+
+    session_start();
+
+    $_SESSION['usuario'] = $usuario;
+    $_SESSION['senha'] = $senha;
+
+    switch ($_GET['pg']) {
+        case 'cpanel':
+            include_once "app/painelAdm/index.php";
+            break;
+
+            case 'login':
+            include_once "app/painelAdm/index.php";
+            break;
+
+        default:
+            #code...
+            break;
+    }
+} else {
+    include_once "app/painelAdm/paginas/login.php";
+};
+
+
+
+$paginas = isset($_GET['pg']);
 
 if ($paginas) {
     # code...
     switch ($_GET['pg']) {
-        
+
         case 'cpanel':
             include_once "app/painelAdm/paginas/login.php";
             // include_once "app/site/paginas/inicial.php";
             break;
-        
+
         default:
-        include_once "app/site/paginas/inicial.php";
+            include_once "app/site/paginas/inicial.php";
             break;
     }
 } else {
