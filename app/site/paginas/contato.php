@@ -15,7 +15,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Mensagem</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" name="mensagem" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
             <div class="form-group text-right">
                 <button type="submit" class="btn btn-primary alert alert-warning"> <span class="icon-minutemailer"></span> Enviar</button>
