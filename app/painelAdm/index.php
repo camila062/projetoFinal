@@ -1,3 +1,7 @@
+<?php 
+if (isset($_SESSION['usuario'])){
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +31,7 @@
   <link rel="stylesheet" href="app/painelAdm/plugins/summernote/summernote-bs4.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+ <div class="wrapper">
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -170,10 +174,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="app/painelAdm/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="https://placehold.it/160x160" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">Perfil</a>
         </div>
       </div>
 
@@ -539,31 +543,31 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/project-edit.html" class="nav-link">
+                <a href="app/painelAdm/pages/examples/project-edit.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Project Edit</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/project-detail.html" class="nav-link">
+                <a href="app/painelAdm/pages/examples/project-detail.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Project Detail</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/contacts.html" class="nav-link">
+                <a href="app/painelAdm/pages/examples/contacts.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Contacts</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/faq.html" class="nav-link active">
+                <a href="app/painelAdm/pages/examples/faq.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>FAQ</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/contact-us.html" class="nav-link">
+                <a href="app/painelAdm/pages/examples/contact-us.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Contact us</p>
                 </a>
@@ -589,25 +593,25 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/examples/login.html" class="nav-link">
+                    <a href="app/painelAdm/pages/examples/login.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Login v1</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/examples/register.html" class="nav-link">
+                    <a href="app/painelAdm/pages/examples/register.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Register v1</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                    <a href="app/painelAdm/pages/examples/forgot-password.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Forgot Password v1</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/examples/recover-password.html" class="nav-link">
+                    <a href="app/painelAdm/pages/examples/recover-password.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Recover Password v1</p>
                     </a>
@@ -624,25 +628,25 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/examples/login-v2.html" class="nav-link">
+                    <a href="app/painelAdm/pages/examples/login-v2.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Login v2</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/examples/register-v2.html" class="nav-link">
+                    <a href="app/painelAdm/pages/examples/register-v2.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Register v2</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/examples/forgot-password-v2.html" class="nav-link">
+                    <a href="app/painelAdm/pages/examples/forgot-password-v2.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Forgot Password v2</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/examples/recover-password-v2.html" class="nav-link">
+                    <a href="app/painelAdm/pages/examples/recover-password-v2.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Recover Password v2</p>
                     </a>
@@ -650,49 +654,49 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/lockscreen.html" class="nav-link">
+                <a href="app/painelAdm/pages/examples/lockscreen.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Lockscreen</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/legacy-user-menu.html" class="nav-link">
+                <a href="app/painelAdm/pages/examples/legacy-user-menu.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Legacy User Menu</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/language-menu.html" class="nav-link">
+                <a href="app/painelAdm/pages/examples/language-menu.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Language Menu</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/404.html" class="nav-link">
+                <a href="app/painelAdm/pages/examples/404.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Error 404</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/500.html" class="nav-link">
+                <a href="app/painelAdm/pages/examples/500.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Error 500</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/pace.html" class="nav-link">
+                <a href="app/painelAdm/pages/examples/pace.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Pace</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/examples/blank.html" class="nav-link">
+                <a href="app/painelAdm/pages/examples/blank.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Blank Page</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="starter.html" class="nav-link">
+                <a href="app/painelAdm/starter.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Starter Page</p>
                 </a>
@@ -709,13 +713,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/search/simple.html" class="nav-link">
+                <a href="app/painelAdm/pages/search/simple.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Simple Search</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/search/enhanced.html" class="nav-link">
+                <a href="app/painelAdm/pages/search/enhanced.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Enhanced</p>
                 </a>
@@ -921,10 +925,10 @@
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
                     <li class="nav-item">
-                      <a class="nav-link active" href="#revenue-chart" data-toggle="tab">Area</a>
+                      <a class="nav-link active" href="app/painelAdm/#revenue-chart" data-toggle="tab">Area</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#sales-chart" data-toggle="tab">Donut</a>
+                      <a class="nav-link" href="app/painelAdm/#sales-chart" data-toggle="tab">Donut</a>
                     </li>
                   </ul>
                 </div>
@@ -1438,42 +1442,51 @@
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
+ </div>
+ <!-- ./wrapper -->
 
-<!-- jQuery -->
-<script src="app/painelAdm/plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="app/painelAdm/plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
+ <!-- jQuery -->
+ <script src="app/painelAdm/plugins/jquery/jquery.min.js"></script>
+ <!-- jQuery UI 1.11.4 -->
+ <script src="app/painelAdm/plugins/jquery-ui/jquery-ui.min.js"></script>
+ <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+ <script>
   $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src="app/painelAdm/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="app/painelAdm/plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="app/painelAdm/plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="app/painelAdm/plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="app/painelAdm/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="app/painelAdm/plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="app/painelAdm/plugins/moment/moment.min.js"></script>
-<script src="app/painelAdm/plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="app/painelAdm/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script src="app/painelAdm/plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="app/painelAdm/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="app/painelAdm/dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="app/painelAdm/dist/js/demo.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="app/painelAdm/dist/js/pages/dashboard.js"></script>
+ </script>
+ <!-- Bootstrap 4 -->
+ <script src="app/painelAdm/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <!-- ChartJS -->
+ <script src="app/painelAdm/plugins/chart.js/Chart.min.js"></script>
+ <!-- Sparkline -->
+ <script src="app/painelAdm/plugins/sparklines/sparkline.js"></script>
+ <!-- JQVMap -->
+ <script src="app/painelAdm/plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="app/painelAdm/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+ <!-- jQuery Knob Chart -->
+ <script src="app/painelAdm/plugins/jquery-knob/jquery.knob.min.js"></script>
+ <!-- daterangepicker -->
+ <script src="app/painelAdm/plugins/moment/moment.min.js"></script>
+ <script src="app/painelAdm/plugins/daterangepicker/daterangepicker.js"></script>
+ <!-- Tempusdominus Bootstrap 4 -->
+ <script src="app/painelAdm/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+ <!-- Summernote -->
+ <script src="app/painelAdm/plugins/summernote/summernote-bs4.min.js"></script>
+ <!-- overlayScrollbars -->
+ <script src="app/painelAdm/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+ <!-- AdminLTE App -->
+ <script src="app/painelAdm/dist/js/adminlte.js"></script>
+ <!-- AdminLTE for demo purposes -->
+ <script src="app/painelAdm/dist/js/demo.js"></script>
+ <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+ <script src="app/painelAdm/dist/js/pages/dashboard.js"></script>
 </body>
 </html>
+
+
+<?php 
+} else {
+  include_once "app/painelAdm/paginas/login.php";
+}
+?>
+
+

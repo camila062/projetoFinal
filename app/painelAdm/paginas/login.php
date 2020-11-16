@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="app/painelAdm/dist/css/adminlte.min.css">
 </head>
 
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background-color: #829FD9;">
   <div class="login-box">
     <div class="login-logo">
       <a href="#">Painel Adm</a>
@@ -28,7 +28,7 @@
 
         <form action="cpanel.php?pg=cpanel" method="post">
           <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Email">
+            <input type="text" name="usuario" class="form-control" placeholder="Email">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-envelope"></span>
@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="senha">
+            <input type="password" name="senha" class="form-control" placeholder="senha">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
