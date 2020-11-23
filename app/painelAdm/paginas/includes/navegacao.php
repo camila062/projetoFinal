@@ -149,24 +149,32 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="cpanel.php?pg=cpanel" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="cpanel.php?pg=inicial" class="nav-link ">
+              <i class="nav-icon fas fa-home"></i>
               <p>
                 Inicial
               </p>
             </a>
           </li>
           <li class="nav-item">
+            <a href="cpanel.php?pg=usuarios-lista" class="nav-link ">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+               Usuários
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="cpanel.php?pg=contato" class="nav-link ">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-address-book"></i>
               <p>
                 Contato
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="cpanel/php?pg=produtos" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="cpanel.php?pg=produtos" class="nav-link">
+              <i class="nav-icon fas fa-barcode"></i>
               <p>
                 Produtos
               </p>

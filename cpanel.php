@@ -2,7 +2,7 @@
 
 include_once "app/painelAdm/helpers/help.php";
 
-session_unset();
+session_start();
 
 // Definindo a variável pg
 $pg = 'cpanel';
@@ -34,6 +34,13 @@ if (isset($_SESSION['usuario'])) {
             include_once "app/painelAdm/paginas/includes/header.php";
             include_once "app/painelAdm/paginas/includes/navegacao.php";
             include_once "app/painelAdm/paginas/produtos.php";
+            include_once "app/painelAdm/paginas/includes/footer.php";
+            break;
+
+        case 'usuarios-lista':
+            include_once "app/painelAdm/paginas/includes/header.php";
+            include_once "app/painelAdm/paginas/includes/navegacao.php";
+            include_once "app/painelAdm/paginas/usuarios-listar.php";
             include_once "app/painelAdm/paginas/includes/footer.php";
             break;
 
