@@ -12,20 +12,35 @@ function verificaSeLogado()
 {
 
     $usuario = $_POST['usuario'];
-    $resultConexao = new Conexao(); 
+    $resultConexao = new Conexao();
 
     $parametros = array(
         ':usuario' => $usuario
     );
 
-   $resultadoConsulta = $resultConexao->consultarBanco('SELECT * FROM usuarios WHERE nome = :usuario', $parametros);
+    $resultadoConsulta = $resultConexao->consultarBanco('SELECT * FROM usuarios WHERE nome = :usuario', $parametros);
 
-   if (count($resultadoConsulta)) {
+    if (count($resultadoConsulta)) {
 
-       $_SESSION['usuario'] = $usuario;
-       return true;
-   }else {
-    echo 'Usuário e senha não confere';
-   }
+        $_SESSION['usuario'] = $usuario;
+        return true;
+    } else {
+        echo 'Usuário e senha não confere';
+    }
+}
+function inserirUsuario()
+{
+    //Pegando as variáveis via POST
+    $nome = trim($_POST['nome']);
+    $senha = trim($_POST['senha']);
+    
+    //Validar as variáveis e encripitar a senha
+    $parametros = array (
+        ':nome' => $nome,
+        ':senha' => password_hash($senha, PASSWORD_DEFAULT)
+    );
 
+    $resultDados = new Conexao();
+    $resultDados->intervencaoNoBanco('INSERT INTO usuarios(nome, senha) VALUES (:nome, :senha)', $parametros);
+    include_once "app/painelAdm/paginas/usuarios-listar.php";
 }
