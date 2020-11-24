@@ -68,6 +68,25 @@ if (isset($_SESSION['usuario'])) {
             include_once "app/painelAdm/paginas/includes/footer.php";
             break;
 
+        case 'usuarios-visualizar':
+            include_once "app/painelAdm/paginas/includes/header.php";
+            include_once "app/painelAdm/paginas/includes/navegacao.php";
+            include_once "app/painelAdm/paginas/usuarios-vizualizar.php";
+            include_once "app/painelAdm/paginas/includes/footer.php";
+            break;
+
+        case 'usuarios-apagar':
+
+            $parametros = array(
+                ':id_usuario' => $_GET['id']
+            );
+
+            $apagarUsuario = new Conexao();
+            $apagarUsuario-> intervencaoNoBanco('DELETE FROM usuarios WHERE id_usuario = :id_usuario', $parametros);
+            Header('Location: ?pg=usuarios-lista');
+
+            break;
+
 
         default:
             include_once "app/painelAdm/paginas/includes/header.php";

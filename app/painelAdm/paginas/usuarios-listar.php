@@ -51,13 +51,13 @@ $dados = $resultDados->consultarBanco('SELECT * FROM usuarios');
                       <td><?php echo $DadosUsuarios ['dataAtualizacao']?></td>
                       
                       <td>
-                        <a href="?pg=visualizar&id=<?php echo $DadosUsuarios['id_usuario']?>" class="btn btn-success" type="submit">
+                        <a href="?pg=usuarios-visualizar&id=<?php echo $DadosUsuarios['id_usuario']?>" class="btn btn-success" type="submit">
                           <i class="fas fa-eye"></i>
                         </a>
-                        <a href="?pg=editar&id=<?php echo $DadosUsuarios['id_usuario']?>" class="btn btn-warning" type="submit">
+                        <a href="?pg=usuarios-editar&id=<?php echo $DadosUsuarios['id_usuario']?>" class="btn btn-warning" type="submit">
                           <i class="fas fa-pen"></i>
                         </a>
-                        <a href="?pg=apagar&id=<?php echo $DadosUsuarios['id_usuario']?>" class="btn btn-danger" type="submit">
+                        <a href="?pg=usuarios-apagar&id=<?php echo $DadosUsuarios['id_usuario']?>" class="btn btn-danger" type="submit">
                           <i class="fas fa-trash"></i>
                         </a>
                       </td>
