@@ -41,9 +41,14 @@ if ($id) {
           <?php foreach ($dados as $dadosUsuarios) { ?>
             <form action="?pg=usuarios-novo" method="POST">
               <div class="jumbotron">
-                <h4>Usuário:</h4>
+                <h4>Dados do Usuário:</h4>
                 <div class="lead">
+                  <h5>Nome:</h5>
                   <?php echo $dadosUsuarios['nome']?>
+                  <h5>Data Criação:</h5>
+                  <?php echo $dadosUsuarios['dataCriacao']?>
+                  <h5>Data Atualização:</h5>
+                  <?php echo $dadosUsuarios['dataAtualizacao']?>
                 </div>
               </div>
               <div class="form-group">
