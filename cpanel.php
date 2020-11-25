@@ -79,24 +79,24 @@ if (isset($_SESSION['usuario'])) {
             include_once "app/painelAdm/paginas/includes/header.php";
             include_once "app/painelAdm/paginas/includes/navegacao.php";
 
-            if ($_REQUEST['RESQUEST_METHOD'] == 'POST') {
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 // Função de atualização de usuário
                 atualizarUsuario();
             } else {
-                
-                echo 'mostrar usuário pelo id';
-                // $IdUsuarioEditar = isset($_GET['id']);
-                // if ($IdUsuarioEditar) {
-                // }
-            }
 
-            include_once "app/painelAdm/paginas/usuarios-editar.php";
+                $IdUsuarioEditar = isset($_GET['id']);
+                if ($IdUsuarioEditar) {
+                    $DadosUsuario = visualizarUsuario($IdUsuarioEditar);
+                    include_once "app/painelAdm/paginas/usuarios-editar.php";
+                } else {
+                    Header('Location: ?pg=usuarios-lista');
+                }
+            }
 
             include_once "app/painelAdm/paginas/includes/footer.php";
             break;
 
         case 'usuarios-apagar':
-
             $parametros = array(
                 ':id_usuario' => $_GET['id']
             );
@@ -104,9 +104,7 @@ if (isset($_SESSION['usuario'])) {
             $apagarUsuario = new Conexao();
             $apagarUsuario->intervencaoNoBanco('DELETE FROM usuarios WHERE id_usuario = :id_usuario', $parametros);
             Header('Location: ?pg=usuarios-lista');
-
             break;
-
 
         default:
             include_once "app/painelAdm/paginas/includes/header.php";

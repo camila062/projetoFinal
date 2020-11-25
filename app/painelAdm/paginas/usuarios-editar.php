@@ -26,20 +26,23 @@ $dados = $resultDados->consultarBanco('SELECT * FROM usuarios');
         <div class="container-fluid">
             <div class="row">
                 <div class="col-6">
-                    <form action="?pg=usuarios-novo" method="POST">
+                <?php foreach ($DadosUsuario as $dados) { ?>
+                    <form action="?pg=usuarios-editar" method="POST">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Nome de Usuário</label>
-                            <input type="text" name="nome" class="form-control" autofocus id="usuario" placeholder="Definir nome de usuário">
+                            <input type="text" name="nome" value="<?php echo $dados['nome']?>" class="form-control" disabled id="usuario">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Senha</label>
-                            <input type="password" name="senha" class="form-control" id="senha" placeholder="Definir senha">
+                            <input type="password" name="senha" autofocus class="form-control" id="senha" placeholder="Definir nova senha">
                         </div>
+                        <input type="hidden" name="id_usuario" value="<?php echo $dados['id_usuario']?>">
                         <div class="form-group">
                             <a href="?pg=usuarios-lista" class="btn btn-info">Voltar</a>
                             <input type="submit" class="btn btn-success" value="Atualizar">
                         </div>
                     </form>
+                    <?php } ?>
                 </div>
                 <!-- /.col -->
             </div>
