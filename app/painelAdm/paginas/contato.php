@@ -41,6 +41,10 @@ $dados = $resultDados->consultarBanco('SELECT * FROM contato');
                     <th>Assunto</th>
                     <th>Mensagem</th>
                     <th>O que deseja fazer</th>
+                    <th>viwes</th>
+                    <th>Data Criação</th>
+                    <th>Data Atualização</th>
+
                   </tr>
                 </thead>
                 <tbody>
@@ -51,11 +55,12 @@ $dados = $resultDados->consultarBanco('SELECT * FROM contato');
                       <td><?php echo $DadosUsuarios ['email']?></td>
                       <td><?php echo $DadosUsuarios ['assunto']?></td>
                       <td><?php echo $DadosUsuarios ['mensagem']?></td>
+                      <td><?php echo $DadosUsuarios ['visualizar']?></td>
                       <td><?php echo $DadosUsuarios ['dataCriacao']?></td>
                       <td><?php echo $DadosUsuarios ['dataAtualizacao']?></td>
                       
                       <td>
-                        <a href="?pg=contato-visualizar&id=<?php echo $DadosUsuarios['id_contato']?>" class="btn btn-success" type="submit">
+                        <a href="?pg=contato-visualizar&id=<?php echo $DadosUsuarios['id_contato']?>"  class="btn btn-success <?php echo $DadosUsuarios['visualizar']?>" type="submit">
                           <i class="fas fa-eye"></i>
                         </a>
                         <a href="?pg=contato-apagar&id=<?php echo $DadosUsuarios['id_contato']?>" class="btn btn-danger" type="submit">
