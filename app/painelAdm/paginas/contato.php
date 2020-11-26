@@ -1,3 +1,9 @@
+<?php
+
+$resultDados = new Conexao();
+$dados = $resultDados->consultarBanco('SELECT * FROM contato');
+
+?>
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <section class="content-header">
@@ -38,98 +44,26 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td>
-                      <a class="btn btn-success" type="submit">
-                        <i class="fas fa-eye"></i>
-                      </a>
-                      <a class="btn btn-warning" type="submit">
-                        <i class="fas fa-pen"></i>
-                      </a>
-                      <a class="btn btn-danger" type="submit">
-                        <i class="fas fa-trash"></i>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 5.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td>5</td>
-                    <td>
-                      <a class="btn btn-success" type="submit">
-                        <i class="fas fa-eye"></i>
-                      </a>
-                      <a class="btn btn-warning" type="submit">
-                        <i class="fas fa-pen"></i>
-                      </a>
-                      <a class="btn btn-danger" type="submit">
-                        <i class="fas fa-trash"></i>
-                      </a></td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 5.5
-                    </td>
-                    <td>Win 95+</td>
-                    <td>5.5</td>
-                    <td>
-                    <a class="btn btn-success" type="submit">
-                        <i class="fas fa-eye"></i>
-                      </a>
-                      <a class="btn btn-warning" type="submit">
-                        <i class="fas fa-pen"></i>
-                      </a>
-                      <a class="btn btn-danger" type="submit">
-                        <i class="fas fa-trash"></i>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 6
-                    </td>
-                    <td>Win 98+</td>
-                    <td>6</td>
-                    <td>
-                    <a class="btn btn-success" type="submit">
-                        <i class="fas fa-eye"></i>
-                      </a>
-                      <a class="btn btn-warning" type="submit">
-                        <i class="fas fa-pen"></i>
-                      </a>
-                      <a class="btn btn-danger" type="submit">
-                        <i class="fas fa-trash"></i>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet Explorer 7</td>
-                    <td>Win XP SP2+</td>
-                    <td>7</td>
-                    <td>
-                    <a class="btn btn-success" type="submit">
-                        <i class="fas fa-eye"></i>
-                      </a>
-                      <a class="btn btn-warning" type="submit">
-                        <i class="fas fa-pen"></i>
-                      </a>
-                      <a class="btn btn-danger" type="submit">
-                        <i class="fas fa-trash"></i>
-                      </a>
-                    </td>
-                  </tr>
+                  <?php foreach ($dados as $DadosUsuarios) { ?>
+                    <tr>
+                      <td><?php echo $DadosUsuarios ['id_contato']?></td>
+                      <td><?php echo $DadosUsuarios ['nome']?></td>
+                      <td><?php echo $DadosUsuarios ['email']?></td>
+                      <td><?php echo $DadosUsuarios ['assunto']?></td>
+                      <td><?php echo $DadosUsuarios ['mensagem']?></td>
+                      <td><?php echo $DadosUsuarios ['dataCriacao']?></td>
+                      <td><?php echo $DadosUsuarios ['dataAtualizacao']?></td>
+                      
+                      <td>
+                        <a href="?pg=contato-visualizar&id=<?php echo $DadosUsuarios['id_contato']?>" class="btn btn-success" type="submit">
+                          <i class="fas fa-eye"></i>
+                        </a>
+                        <a href="?pg=contato-apagar&id=<?php echo $DadosUsuarios['id_contato']?>" class="btn btn-danger" type="submit">
+                          <i class="fas fa-trash"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  <?php } ?>
                 </tbody>
               </table>
             </div>

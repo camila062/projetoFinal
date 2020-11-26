@@ -106,6 +106,23 @@ if (isset($_SESSION['usuario'])) {
             Header('Location: ?pg=usuarios-lista');
             break;
 
+        case 'contato-visualizar':
+            include_once "app/painelAdm/paginas/includes/header.php";
+            include_once "app/painelAdm/paginas/includes/navegacao.php";
+            include_once "app/painelAdm/paginas/contato-vizualizar.php";
+            include_once "app/painelAdm/paginas/includes/footer.php";
+            break;
+
+        case 'contato-apagar':
+            $parametros = array(
+                ':id_contato' => $_GET['id']
+            );
+
+            $apagarUsuario = new Conexao();
+            $apagarUsuario->intervencaoNoBanco('DELETE FROM contato WHERE id_contato = :id_contato', $parametros);
+            Header('Location: cpanel.php?pg=contato');
+            break;
+
         default:
             include_once "app/painelAdm/paginas/includes/header.php";
             include_once "app/painelAdm/paginas/includes/navegacao.php";
