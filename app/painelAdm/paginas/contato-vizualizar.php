@@ -11,6 +11,8 @@ if ($id) {
 
   $resultUsuario = new Conexao();
   $dados = $resultUsuario->consultarBanco('SELECT * FROM contato WHERE id_contato = :id_contato', $parametros);
+
+  visualizarMsg();
 } else {
   Header('Location: cpanel.php?pg=contato');
 }

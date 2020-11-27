@@ -3,6 +3,7 @@
 $resultDados = new Conexao();
 $dados = $resultDados->consultarBanco('SELECT * FROM contato');
 
+//visualizarMsg();
 ?>
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -60,7 +61,7 @@ $dados = $resultDados->consultarBanco('SELECT * FROM contato');
                       <td><?php echo $DadosUsuarios ['dataAtualizacao']?></td>
                       
                       <td>
-                        <a href="?pg=contato-visualizar&id=<?php echo $DadosUsuarios['id_contato']?>"  class="btn btn-success <?php echo $DadosUsuarios['visualizar']?>" type="submit">
+                        <a href="?pg=contato-visualizar&id=<?php echo $DadosUsuarios['id_contato']?>"  class="btn <?php echo ($DadosUsuarios['visualizar']== 1) ? "btn-warning" : "btn-success" ;?>" type="submit">
                           <i class="fas fa-eye"></i>
                         </a>
                         <a href="?pg=contato-apagar&id=<?php echo $DadosUsuarios['id_contato']?>" class="btn btn-danger" type="submit">

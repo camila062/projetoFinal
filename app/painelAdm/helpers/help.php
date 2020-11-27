@@ -11,9 +11,9 @@ include_once 'app/painelAdm/helpers/conexao.php';
 function verificaSeLogado()
 {
 
-    $usuario = trim( $_POST['usuario']);
-    $senha= trim ($_POST['senha']);
-    
+    $usuario = trim($_POST['usuario']);
+    $senha = trim($_POST['senha']);
+
     $parametros = array(
         ':usuario' => $usuario
     );
@@ -28,11 +28,10 @@ function verificaSeLogado()
             //adiciona sessão
             $_SESSION['usuario'] = $usuario;
             return true;
-        }else {
+        } else {
             echo 'Senha não confere';
             return false;
         }
-
     } else {
         echo 'Usuário e senha não confere';
     }
@@ -65,7 +64,7 @@ function atualizarUsuario()
     //Validando as Variáveis
     $parametros = array(
         ':id_usuario' => $idUsuario,
-        ':senha' =>password_hash($senha, PASSWORD_DEFAULT)
+        ':senha' => password_hash($senha, PASSWORD_DEFAULT)
     );
 
     //Atualizar no Banco
@@ -92,4 +91,17 @@ function visualizarUsuario($id)
             Header('Location: ?pg=usuarios-lista');
         }
     }
+}
+
+function visualizarMsg()
+{
+    $idContato = $_GET['id'];
+
+    $parametros = array(
+        ':visualizar' => 1,
+        'id_contato' => $idContato
+    );
+
+    $resultUsuarioConsulta = new Conexao();
+    $dados = $resultUsuarioConsulta->intervencaoNoBanco('UPDATE contato SET visualizar = :visualizar WHERE id_contato = :id_contato', $parametros);
 }
