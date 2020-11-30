@@ -35,7 +35,7 @@ $dados = $resultDados->consultarBanco('SELECT * FROM usuarios');
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                   <tr>
-                    <th>Id</th>
+                    <th>Imagem</th>
                     <th>Usuário</th>
                     <th>Data Criação</th>
                     <th>Data Atualizaçao</th>
@@ -45,7 +45,7 @@ $dados = $resultDados->consultarBanco('SELECT * FROM usuarios');
                 <tbody>
                   <?php foreach ($dados as $DadosUsuarios) { ?>
                     <tr>
-                      <td><?php echo $DadosUsuarios ['id_usuario']?></td>
+                      <td><?php echo $DadosUsuarios ['img']?></td>
                       <td><?php echo $DadosUsuarios ['nome']?></td>
                       <td><?php echo $DadosUsuarios ['dataCriacao']?></td>
                       <td><?php echo $DadosUsuarios ['dataAtualizacao']?></td>

@@ -80,6 +80,8 @@ if (isset($_SESSION['usuario'])) {
             include_once "app/painelAdm/paginas/includes/navegacao.php";
 
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+
                 // Função de atualização de usuário
                 atualizarUsuario();
             } else {
@@ -131,6 +133,7 @@ if (isset($_SESSION['usuario'])) {
             break;
     }
 } else {
+    $erro;
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (verificaSeLogado()) {
             include_once "app/painelAdm/paginas/includes/header.php";

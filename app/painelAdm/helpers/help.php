@@ -29,11 +29,12 @@ function verificaSeLogado()
             $_SESSION['usuario'] = $usuario;
             return true;
         } else {
-            echo 'Senha não confere';
-            return false;
+            $erro = 'Usuário ou senha inválidos';
+            include_once "app/painelAdm/paginas/login.php";
         }
     } else {
-        echo 'Usuário e senha não confere';
+        $erro = 'Usuário ou senha inválidos';
+        include_once "app/painelAdm/paginas/login.php";
     }
 }
 
@@ -43,6 +44,18 @@ function inserirUsuario()
     //Pegando as variáveis via POST
     $nome = trim($_POST['nome']);
     $senha = trim($_POST['senha']);
+
+    // echo '<pre>';
+    // print_r($_FILES);
+    // // die();
+
+    //Pegando imagem
+    //$img_usuario = $_FILES['img_usuario'];
+    //$img_usuario = $_FILES['img_usuario']['name'];
+
+    move_uploaded_file($_FILES['img_usuario']['tmp_name'], 'app/painelAdm/assets/img/' . $_FILES['img_usuario']['name']);
+    die('Upload Finalizado com sucesso');
+
 
     //Validar as variáveis e encripitar a senha
     $parametros = array(
