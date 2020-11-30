@@ -54,17 +54,18 @@ function inserirUsuario()
     //$img_usuario = $_FILES['img_usuario']['name'];
 
     move_uploaded_file($_FILES['img_usuario']['tmp_name'], 'app/painelAdm/assets/img/' . $_FILES['img_usuario']['name']);
-    die('Upload Finalizado com sucesso');
+    // die('Upload Finalizado com sucesso');
 
 
     //Validar as variáveis e encripitar a senha
     $parametros = array(
         ':nome' => $nome,
-        ':senha' => password_hash($senha, PASSWORD_DEFAULT)
+        ':senha' => password_hash($senha, PASSWORD_DEFAULT),
+        ':img_usuario' => ($_FILES['img_usuario']['name']== true) ? 'app/painelAdm/assets/img/' . $_FILES['img_usuario']['name'] :'app/painelAdm/assets/img/anonimo1.jpg'
     );
 
     $resultDados = new Conexao();
-    $resultDados->intervencaoNoBanco('INSERT INTO usuarios(nome, senha) VALUES (:nome, :senha)', $parametros);
+    $resultDados->intervencaoNoBanco('INSERT INTO usuarios(nome, senha, img) VALUES (:nome, :senha, :img_usuario)', $parametros);
     include_once "app/painelAdm/paginas/usuarios-listar.php";
 }
 
