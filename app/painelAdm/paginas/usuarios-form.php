@@ -1,7 +1,7 @@
 <?php
 
 $resultDados = new Conexao();
-$dados = $resultDados->consultarBanco('SELECT * FROM usuarios WHERE ORDER BY dataAtualizacao Desc');
+$dados = $resultDados->consultarBanco('SELECT * FROM usuarios ORDER BY dataAtualizacao Desc');
 
 ?>
 <div class="content-wrapper">
