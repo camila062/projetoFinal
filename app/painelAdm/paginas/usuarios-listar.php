@@ -45,7 +45,9 @@ $dados = $resultDados->consultarBanco('SELECT * FROM usuarios');
                 <tbody>
                   <?php foreach ($dados as $DadosUsuarios) { ?>
                     <tr>
-                      <td><?php echo $DadosUsuarios ['img']?></td>
+                      <td style="width:20px;">
+                        <img src="<?php echo $DadosUsuarios ['img']?>" class="img-fluid" alt="">
+                      </td>
                       <td><?php echo $DadosUsuarios ['nome']?></td>
                       <td><?php echo $DadosUsuarios ['dataCriacao']?></td>
                       <td><?php echo $DadosUsuarios ['dataAtualizacao']?></td>
