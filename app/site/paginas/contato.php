@@ -8,12 +8,12 @@
         <form action="?pg=cad-mensagem" method="POST">
 
             <div class="form-group">
-                <label for="nome">Nome</label>
+                <label for="nome">Nome:</label>
                 <input type="text" name="nome" autofocus class="form-control" id="nome" placeholder="Nome">
             </div>
 
             <div class="form-group">
-                <label for="email">E-mail</label>
+                <label for="email">E-mail:</label>
                 <input type="email" name="email" class="form-control" id="email" placeholder="Email">
             </div>
 
@@ -40,7 +40,7 @@
             </div>
 
             <div class="form-group">
-                <label for="mensagem">Mensagem</label>
+                <label for="mensagem">Mensagem:</label>
                 <textarea class="form-control" name="mensagem" id="mensagem" rows="3"></textarea>
             </div>
 
